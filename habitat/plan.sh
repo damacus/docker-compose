@@ -9,7 +9,10 @@ pkg_source=https://github.com/docker/compose/releases/download/${pkg_version}/${
 pkg_filename=${pkg_name}
 pkg_shasum=78734996d716113f9f9716d0b5064166e9475835e5000fd01b0480d19e1f7372
 pkg_build_deps=(core/hab-pkg-export-docker)
-pkg_deps=(core/python)
+pkg_deps=(
+  core/python
+  core/gcc
+)
 pkg_bin_dirs=(bin)
 
 do_unpack(){
